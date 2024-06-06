@@ -1,0 +1,16 @@
+<h1>Movies</h1>
+
+<% @movies.each do |movie| %>
+  <div class="list">
+    <h2><%= movie.title %></h2>
+    <ul>
+      <% @movies.each do |movie| %>
+        <li>
+          <strong><%= movie.title %></strong> - <%= movie.overview %>
+          <img src="<%= movie.poster_url %>" alt="<%= movie.title %> poster " style="max-width: 100px; max-height: 200px;">
+          <p>Rating: <%= movie.rating %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
